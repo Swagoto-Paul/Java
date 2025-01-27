@@ -1,10 +1,15 @@
-package Programs.Practise;
+//package Programs.Practise;
+
+import java.util.Scanner;
 
 public class N_queen {
     public static void main(String[] args) {
-        int n = 4;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the no of rows: ");
+        int n = sc.nextInt();
         boolean [][] board = new boolean[n][n];
         System.out.println("NO OF WAYS TO PLACE QUEEN: "+queen(board,0));
+        sc.close();
     }
 
     static int queen(boolean[][] board,int row) {
